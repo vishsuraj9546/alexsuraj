@@ -1,0 +1,92 @@
+
+
+/* ✅ Fonts import karo (Google Fonts use kar rahe ho to yeh link karo) */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;600;700&display=swap');
+
+/* ✅ Body ka default background aur text color */
+/* Tailwind directives – always top pe rakhna */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🎨 Default theme styling */
+html, body {
+  @apply bg-black text-white;
+  scroll-behavior: smooth;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* 🎨 Selection color */
+::selection {
+  background: #f87171; /* Tailwind red-400 */
+  color: white;
+}
+
+/* 🎨 Smooth Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #111;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ef4444, #f97316);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #dc2626, #ea580c);
+}
+
+/* ✨ Fade section default state */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 🌈 Gradient reveal (for special headings or divs) */
+.gradient-reveal {
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: background-position 0.8s ease-out;
+}
+.gradient-reveal.in-view {
+  background-position: right center;
+}
+
+/* 🎈 Floating effect */
+.float-element {
+  will-change: transform;
+}
+
+/* 🖱 Link hover polish */
+a {
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #f97316; /* Tailwind orange-500 */
+}
+
+/* ✨ Button hover glow */
+button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.4); /* red-500 glow */
+}
+
+/* 📦 Image hover polish */
+img {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.3); /* orange-500 glow */
+}
+
+html {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
